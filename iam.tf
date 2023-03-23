@@ -38,7 +38,7 @@ resource "aws_iam_role_policy_attachment" "lambda" {
   policy_arn = each.value
 }
 
-module "short-name_lambda" {
+module "short-name" {
   count      = local.lambda_role_prefix != null ? 1 : 0
   source     = "axetrading/short-name/null"
   version    = "1.0.0"

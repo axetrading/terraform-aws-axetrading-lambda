@@ -3,12 +3,6 @@ variable "name" {
   description = "The name of the K8S deployment lambda and its resources"
 }
 
-variable "namespace" {
-  type        = string
-  description = "Kubernetes namespace"
-  default     = "default"
-}
-
 variable "create_role" {
   type        = bool
   description = "Whether to create or not the IAM Role for the lambda function"
