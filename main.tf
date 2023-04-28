@@ -1,8 +1,8 @@
 resource "aws_lambda_function" "this" {
   function_name                  = var.name
   architectures                  = var.architectures
-  handler                        = var.package_type != "Zip" ? null : var.handler
-  runtime                        = var.package_type != "Zip" ? null : var.runtime
+  handler                        = var.lambda_package_type != "Zip" ? null : var.handler
+  runtime                        = var.lambda_package_type != "Zip" ? null : var.runtime
   image_uri                      = var.lambda_function_image_uri
   memory_size                    = var.lambda_memory_size
   package_type                   = var.lambda_package_type

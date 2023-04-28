@@ -174,12 +174,6 @@ variable "lambda_package_type" {
   default     = "Zip"
 }
 
-variable "package_type" {
-  type        = string
-  description = "The type of package used for the Lambda function."
-  default     = "Zip"
-}
-
 variable "handler" {
   type        = string
   description = "The name of the function that Lambda calls to begin execution."
