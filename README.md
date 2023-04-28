@@ -56,7 +56,6 @@
 | <a name="input_lambda_role_policy_arns"></a> [lambda\_role\_policy\_arns](#input\_lambda\_role\_policy\_arns) | List of Amazon Resource Names (ARNs) of IAM policies to attach to the IAM roles used by the Lambda function. | `set(string)` | `[]` | no |
 | <a name="input_max_session_duration"></a> [max\_session\_duration](#input\_max\_session\_duration) | Maximum CLI/API session duration in seconds between 3600 and 43200 | `number` | `null` | no |
 | <a name="input_name"></a> [name](#input\_name) | The name of the K8S deployment lambda and its resources | `string` | n/a | yes |
-| <a name="input_package_type"></a> [package\_type](#input\_package\_type) | The type of package used for the Lambda function. | `string` | `"Zip"` | no |
 | <a name="input_policy_name_prefix"></a> [policy\_name\_prefix](#input\_policy\_name\_prefix) | IAM policy name prefix | `string` | `"eks-policy"` | no |
 | <a name="input_principals"></a> [principals](#input\_principals) | A list of IAM principals that are allowed to invoke the Lambda function URL | `list(string)` | `[]` | no |
 | <a name="input_reserved_concurrent_executions"></a> [reserved\_concurrent\_executions](#input\_reserved\_concurrent\_executions) | mount of reserved concurrent executions for this lambda function. A value of 0 disables lambda from being triggered and -1 removes any concurrency limitations. | `string` | `"-1"` | no |
