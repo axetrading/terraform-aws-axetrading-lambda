@@ -167,3 +167,63 @@ variable "architectures" {
   type        = list(string)
   default     = null
 }
+
+variable "lambda_package_type" {
+  description = "The type of Lambda deployment package to use (Zip or Image)."
+  type        = string
+  default     = "Zip"
+}
+
+variable "package_type" {
+  type        = string
+  description = "The type of package used for the Lambda function."
+  default     = "Zip"
+}
+
+variable "handler" {
+  type        = string
+  description = "The name of the function that Lambda calls to begin execution."
+  default     = null
+}
+
+variable "runtime" {
+  type        = string
+  description = "The identifier of the function's runtime."
+  default     = null
+}
+
+variable "efs_mount_path" {
+  type        = string
+  description = "The local mount path for the EFS filesystem."
+  default     = null
+}
+
+variable "efs_filesystem_arn" {
+  type        = string
+  description = "The ARN of the EFS filesystem to mount."
+  default     = null
+}
+
+variable "create_lambda_function_url" {
+  type        = bool
+  default     = false
+  description = "Specifies whether to create a Lambda function URL resource or not."
+}
+
+variable "authorization_type" {
+  type        = string
+  default     = "AWS_IAM"
+  description = "The type of authentication that the function URL uses."
+}
+
+variable "invoke_mode" {
+  type        = string
+  default     = "BUFFERED"
+  description = "Determines how the Lambda function responds to an invocation."
+}
+
+variable "principals" {
+  description = "A list of IAM principals that are allowed to invoke the Lambda function URL"
+  type        = list(string)
+  default     = []
+}
