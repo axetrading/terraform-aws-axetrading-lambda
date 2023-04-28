@@ -13,3 +13,11 @@ output "lambda_security_group_id" {
 output "lambda_iam_role_name" {
   value = try(aws_iam_role.lambda[0].id, "")
 }
+
+output "lambda_iam_role_arn" {
+  value = try(aws_iam_role.lambda[0].arn, "")
+}
+
+output "lambda_function_url" {
+  value = try(aws_lambda_function_url.this[0].function_url, "")
+}
