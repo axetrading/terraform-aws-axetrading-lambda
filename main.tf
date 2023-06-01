@@ -32,7 +32,7 @@ resource "aws_lambda_function" "this" {
     }
   }
 
-  ephemeral_storage {
+  dynamic "ephemeral_storage" {
     for_each = var.lambda_ephemeral_storage_size != null ? [true] : []
     content {
       size = var.lambda_ephemeral_storage_size
