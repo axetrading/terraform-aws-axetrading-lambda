@@ -93,7 +93,7 @@ variable "reserved_concurrent_executions" {
 variable "lambda_ephemeral_storage_size" {
   type        = number
   description = "The amount of Ephemeral storage(/tmp) to allocate for the Lambda Function in MB. This parameter is used to expand the total amount of Ephemeral storage available, beyond the default amount of 512MB"
-  default     = 512
+  default     = null
 }
 
 variable "lambda_memory_size" {

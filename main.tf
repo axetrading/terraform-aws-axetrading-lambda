@@ -33,7 +33,10 @@ resource "aws_lambda_function" "this" {
   }
 
   ephemeral_storage {
-    size = var.lambda_ephemeral_storage_size
+    for_each = var.lambda_ephemeral_storage_size != null ? [true] : []
+    content {
+      size = var.lambda_ephemeral_storage_size
+    }
   }
 
   tracing_config {
