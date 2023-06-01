@@ -50,7 +50,7 @@
 | <a name="input_handler"></a> [handler](#input\_handler) | The name of the function that Lambda calls to begin execution. | `string` | `null` | no |
 | <a name="input_invoke_mode"></a> [invoke\_mode](#input\_invoke\_mode) | Determines how the Lambda function responds to an invocation. | `string` | `"BUFFERED"` | no |
 | <a name="input_lambda_ephemeral_storage_size"></a> [lambda\_ephemeral\_storage\_size](#input\_lambda\_ephemeral\_storage\_size) | The amount of Ephemeral storage(/tmp) to allocate for the Lambda Function in MB. This parameter is used to expand the total amount of Ephemeral storage available, beyond the default amount of 512MB | `number` | `512` | no |
-| <a name="input_lambda_function_image_uri"></a> [lambda\_function\_image\_uri](#input\_lambda\_function\_image\_uri) | ECR image URI containing the function's deployment package. | `string` | n/a | yes |
+| <a name="input_lambda_function_image_uri"></a> [lambda\_function\_image\_uri](#input\_lambda\_function\_image\_uri) | ECR image URI containing the function's deployment package. | `string` | `null` | no |
 | <a name="input_lambda_iam_role"></a> [lambda\_iam\_role](#input\_lambda\_iam\_role) | The ARN of the IAM Role that will be used by the Lambda Function | `string` | `null` | no |
 | <a name="input_lambda_memory_size"></a> [lambda\_memory\_size](#input\_lambda\_memory\_size) | Amount of memory in MB your Lambda Function can use at runtime. Defaults to 128 | `number` | `128` | no |
 | <a name="input_lambda_package_type"></a> [lambda\_package\_type](#input\_lambda\_package\_type) | The type of Lambda deployment package to use (Zip or Image). | `string` | `"Zip"` | no |
