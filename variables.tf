@@ -105,6 +105,7 @@ variable "lambda_memory_size" {
 variable "lambda_function_image_uri" {
   type        = string
   description = "ECR image URI containing the function's deployment package."
+  default     = null
 }
 
 
