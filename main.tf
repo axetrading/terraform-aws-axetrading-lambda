@@ -4,6 +4,7 @@ resource "aws_lambda_function" "this" {
   handler                        = var.lambda_package_type != "Zip" ? null : var.handler
   runtime                        = var.lambda_package_type != "Zip" ? null : var.runtime
   image_uri                      = var.lambda_function_image_uri
+  filename                       = var.lambda_package_type != "Zip" ? null : var.filename
   memory_size                    = var.lambda_memory_size
   package_type                   = var.lambda_package_type
   reserved_concurrent_executions = var.reserved_concurrent_executions
