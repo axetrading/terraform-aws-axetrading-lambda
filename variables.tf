@@ -228,3 +228,9 @@ variable "filename" {
   type        = string
   default     = null
 }
+
+variable "source_code_hash" {
+  description = "Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either filename or image_uri."
+  type        = string
+  default     = null
+}
