@@ -45,6 +45,7 @@
 | <a name="input_efs_filesystem_arn"></a> [efs\_filesystem\_arn](#input\_efs\_filesystem\_arn) | The ARN of the EFS filesystem to mount. | `string` | `null` | no |
 | <a name="input_efs_mount_path"></a> [efs\_mount\_path](#input\_efs\_mount\_path) | The local mount path for the EFS filesystem. | `string` | `null` | no |
 | <a name="input_env_vars"></a> [env\_vars](#input\_env\_vars) | Map of environment variables to set for the Lambda function. | `map(string)` | `{}` | no |
+| <a name="input_filename"></a> [filename](#input\_filename) | The path to the function's deployment package within the local filesystem. | `string` | `null` | no |
 | <a name="input_force_detach_policies"></a> [force\_detach\_policies](#input\_force\_detach\_policies) | Whether policies should be detached from this role when destroying | `bool` | `true` | no |
 | <a name="input_handler"></a> [handler](#input\_handler) | The name of the function that Lambda calls to begin execution. | `string` | `null` | no |
 | <a name="input_invoke_mode"></a> [invoke\_mode](#input\_invoke\_mode) | Determines how the Lambda function responds to an invocation. | `string` | `"BUFFERED"` | no |
