@@ -153,7 +153,7 @@ variable "lambda_iam_role" {
 
 variable "lambda_role_policy_arns" {
   description = "List of Amazon Resource Names (ARNs) of IAM policies to attach to the IAM roles used by the Lambda function."
-  type        = set(string)
+  type        = list(string)
   default     = []
 }
 
