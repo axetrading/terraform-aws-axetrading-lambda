@@ -32,7 +32,7 @@ resource "aws_iam_role" "lambda" {
 }
 
 resource "aws_iam_role_policy_attachment" "lambda" {
-  count      = length(var.lambda_role_policy_arns) > 0 ? var.lambda_role_policy_arns : 0
+  count      = length(var.lambda_role_policy_arns)
   role       = aws_iam_role.lambda[0].name
   policy_arn = var.lambda_role_policy_arns[count.index]
 }
