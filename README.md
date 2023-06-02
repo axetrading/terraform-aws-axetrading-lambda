@@ -57,7 +57,7 @@
 | <a name="input_lambda_memory_size"></a> [lambda\_memory\_size](#input\_lambda\_memory\_size) | Amount of memory in MB your Lambda Function can use at runtime. Defaults to 128 | `number` | `128` | no |
 | <a name="input_lambda_package_type"></a> [lambda\_package\_type](#input\_lambda\_package\_type) | The type of Lambda deployment package to use (Zip or Image). | `string` | `"Zip"` | no |
 | <a name="input_lambda_role_policy_arns"></a> [lambda\_role\_policy\_arns](#input\_lambda\_role\_policy\_arns) | List of Amazon Resource Names (ARNs) of IAM policies to attach to the IAM roles used by the Lambda function. | `list(string)` | `[]` | no |
-| <a name="input_log_group_name_prefixes"></a> [log\_group\_name\_prefixes](#input\_log\_group\_name\_prefixes) | List of log group name prefixes | `list(string)` | `[]` | no |
+| <a name="input_log_group_name_prefixes"></a> [log\_group\_name\_prefixes](#input\_log\_group\_name\_prefixes) | List of log group name prefixes | `list(string)` | `null` | no |
 | <a name="input_max_session_duration"></a> [max\_session\_duration](#input\_max\_session\_duration) | Maximum CLI/API session duration in seconds between 3600 and 43200 | `number` | `null` | no |
 | <a name="input_name"></a> [name](#input\_name) | The name of the K8S deployment lambda and its resources | `string` | n/a | yes |
 | <a name="input_policy_name_prefix"></a> [policy\_name\_prefix](#input\_policy\_name\_prefix) | IAM policy name prefix | `string` | `"eks-policy"` | no |

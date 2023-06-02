@@ -11,7 +11,7 @@ variable "event_rule_name" {
 variable "log_group_name_prefixes" {
   description = "List of log group name prefixes"
   type        = list(string)
-  default     = []
+  default     = null
 }
 
 variable "event_bus_name" {

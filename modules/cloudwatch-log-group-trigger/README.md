@@ -26,7 +26,7 @@
 | <a name="input_event_bus_name"></a> [event\_bus\_name](#input\_event\_bus\_name) | Name of the CloudWatch event bus | `string` | `"default"` | no |
 | <a name="input_event_rule_name"></a> [event\_rule\_name](#input\_event\_rule\_name) | Name of the CloudWatch event rule | `string` | n/a | yes |
 | <a name="input_lambda_function_arn"></a> [lambda\_function\_arn](#input\_lambda\_function\_arn) | ARN of the Lambda function | `string` | n/a | yes |
-| <a name="input_log_group_name_prefixes"></a> [log\_group\_name\_prefixes](#input\_log\_group\_name\_prefixes) | List of log group name prefixes | `list(string)` | `[]` | no |
+| <a name="input_log_group_name_prefixes"></a> [log\_group\_name\_prefixes](#input\_log\_group\_name\_prefixes) | List of log group name prefixes | `list(string)` | `null` | no |
 
 ## Outputs
 
