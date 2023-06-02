@@ -17,6 +17,7 @@
 
 | Name | Source | Version |
 |------|--------|---------|
+| <a name="module_cloudwatch_log_group_trigger"></a> [cloudwatch\_log\_group\_trigger](#module\_cloudwatch\_log\_group\_trigger) | ./modules/cloudwatch-log-group-trigger | n/a |
 | <a name="module_short-name"></a> [short-name](#module\_short-name) | axetrading/short-name/null | 1.0.0 |
 
 ## Resources
@@ -39,6 +40,7 @@
 |------|-------------|------|---------|:--------:|
 | <a name="input_architectures"></a> [architectures](#input\_architectures) | Architecture for Lambda function. Valid values are x86\_64 and arm64 | `list(string)` | `null` | no |
 | <a name="input_authorization_type"></a> [authorization\_type](#input\_authorization\_type) | The type of authentication that the function URL uses. | `string` | `"AWS_IAM"` | no |
+| <a name="input_cloudwatch_log_group_trigger_enabled"></a> [cloudwatch\_log\_group\_trigger\_enabled](#input\_cloudwatch\_log\_group\_trigger\_enabled) | Whether to create a CloudWatch Log Group Trigger for the Lambda function. | `bool` | `false` | no |
 | <a name="input_create_lambda_function_url"></a> [create\_lambda\_function\_url](#input\_create\_lambda\_function\_url) | Specifies whether to create a Lambda function URL resource or not. | `bool` | `false` | no |
 | <a name="input_create_role"></a> [create\_role](#input\_create\_role) | Whether to create or not the IAM Role for the lambda function | `bool` | `true` | no |
 | <a name="input_create_security_group"></a> [create\_security\_group](#input\_create\_security\_group) | Determines whether to create security group for RDS cluster | `bool` | `true` | no |
@@ -55,6 +57,7 @@
 | <a name="input_lambda_memory_size"></a> [lambda\_memory\_size](#input\_lambda\_memory\_size) | Amount of memory in MB your Lambda Function can use at runtime. Defaults to 128 | `number` | `128` | no |
 | <a name="input_lambda_package_type"></a> [lambda\_package\_type](#input\_lambda\_package\_type) | The type of Lambda deployment package to use (Zip or Image). | `string` | `"Zip"` | no |
 | <a name="input_lambda_role_policy_arns"></a> [lambda\_role\_policy\_arns](#input\_lambda\_role\_policy\_arns) | List of Amazon Resource Names (ARNs) of IAM policies to attach to the IAM roles used by the Lambda function. | `list(string)` | `[]` | no |
+| <a name="input_log_group_name_prefixes"></a> [log\_group\_name\_prefixes](#input\_log\_group\_name\_prefixes) | List of log group name prefixes | `list(string)` | `[]` | no |
 | <a name="input_max_session_duration"></a> [max\_session\_duration](#input\_max\_session\_duration) | Maximum CLI/API session duration in seconds between 3600 and 43200 | `number` | `null` | no |
 | <a name="input_name"></a> [name](#input\_name) | The name of the K8S deployment lambda and its resources | `string` | n/a | yes |
 | <a name="input_policy_name_prefix"></a> [policy\_name\_prefix](#input\_policy\_name\_prefix) | IAM policy name prefix | `string` | `"eks-policy"` | no |

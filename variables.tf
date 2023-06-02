@@ -234,3 +234,15 @@ variable "source_code_hash" {
   type        = string
   default     = null
 }
+
+variable "cloudwatch_log_group_trigger_enabled" {
+  description = "Whether to create a CloudWatch Log Group Trigger for the Lambda function."
+  type        = bool
+  default     = false
+}
+
+variable "log_group_name_prefixes" {
+  description = "List of log group name prefixes"
+  type        = list(string)
+  default     = []
+}
