@@ -32,10 +32,9 @@ resource "aws_iam_role" "lambda" {
 }
 
 resource "aws_iam_role_policy_attachment" "lambda" {
-  for_each = length(var.lambda_role_policy_arns) > 0 ? var.lambda_role_policy_arns : []
-
+  count      = length(var.lambda_role_policy_arns) > 0 ? var.lambda_role_policy_arns : 0
   role       = aws_iam_role.lambda[0].name
-  policy_arn = each.value
+  policy_arn = var.lambda_role_policy_arns[count.index]
 }
 
 resource "aws_iam_role_policy_attachment" "vpc_execution_role" {
@@ -43,7 +42,6 @@ resource "aws_iam_role_policy_attachment" "vpc_execution_role" {
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"
   role       = aws_iam_role.lambda[0].name
 }
-
 
 module "short-name" {
   count      = local.lambda_role_prefix != null ? 1 : 0
