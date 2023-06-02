@@ -2,7 +2,7 @@
   "detail": {
     "eventName": ["CreateLogGroup"],
     "eventSource": ["logs.amazonaws.com"],
-    %{~ if log_group_name_prefixes != null ~}
+    %{~ if log_group_name_prefixes != [] ~}
     "requestParameters": {
       "logGroupName": [
         %{~ for prefix in log_group_name_prefixes ~}
