@@ -65,10 +65,10 @@ resource "aws_lambda_permission" "url" {
 }
 
 resource "aws_lambda_permission" "eventbridge_invoke" {
-  for_each       = var.cloudwatch_log_group_trigger_enabled ? [true] : []
-  statement_id   = "AllowExecutionFromEventBridge"
-  action         = "lambda:InvokeFunction"
-  function_name  = aws_lambda_function.this.function_name
-  principal      = "events.amazonaws.com"
-  source_arn     = module.cloudwatch_log_group_trigger.event_rule_arn
+  for_each      = var.cloudwatch_log_group_trigger_enabled ? [true] : []
+  statement_id  = "AllowExecutionFromEventBridge"
+  action        = "lambda:InvokeFunction"
+  function_name = aws_lambda_function.this.function_name
+  principal     = "events.amazonaws.com"
+  source_arn    = module.cloudwatch_log_group_trigger.event_rule_arn
 }
