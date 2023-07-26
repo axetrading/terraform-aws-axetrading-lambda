@@ -129,7 +129,7 @@ variable "create_security_group" {
 
 variable "security_group_name" {
   type        = string
-  description = "RDS Security Group Name"
+  description = "AWS Managed Grafana Security Group Name"
   default     = ""
 }
 
