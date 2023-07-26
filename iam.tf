@@ -1,3 +1,7 @@
+locals {
+  lambda_role_name   = var.role_name != null ? format("%s-%s", var.role_name, "lambda") : null
+  lambda_role_prefix = var.role_name_prefix != null ? format("%s-%s", var.role_name_prefix, "lambda") : null
+}
 
 data "aws_iam_policy_document" "lambda" {
   count = var.create_role ? 1 : 0
