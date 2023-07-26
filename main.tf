@@ -70,5 +70,5 @@ resource "aws_lambda_permission" "eventbridge_invoke" {
   action        = "lambda:InvokeFunction"
   function_name = aws_lambda_function.this.function_name
   principal     = "events.amazonaws.com"
-  source_arn    = module.cloudwatch_log_group_trigger.event_rule_arn
+  source_arn    = module.cloudwatch_log_group_trigger[0].event_rule_arn
 }
