@@ -43,10 +43,6 @@ resource "aws_lambda_function" "this" {
     mode = var.tracing_mode
   }
 
-  lifecycle {
-    ignore_changes = ["image_uri", "environment"]
-  }
-
   tags = var.tags
 }
 

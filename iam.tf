@@ -44,10 +44,15 @@ resource "aws_iam_role_policy_attachment" "vpc_execution_role" {
   role       = aws_iam_role.lambda[0].name
 }
 
+resource "aws_iam_role_policy_attachment" "secret_manager_execution_role" {
+  count      = var.subnet_ids != null && (var.security_group_ids != null || var.create_security_group) ? 1 : 0
+  policy_arn = "arn:aws:iam::aws:policy/service-role/SecretsManagerReadWrite"
+  role       = aws_iam_role.lambda[0].name
+}
+
 module "short-name" {
   count      = local.lambda_role_prefix != null ? 1 : 0
-  source     = "axetrading/short-name/null"
-  version    = "1.0.0"
+  source     = "git@github.com:axetrading/terraform-null-short-name.git?ref=v1.0.0"
   max_length = 38
   value      = local.lambda_role_prefix
 }
